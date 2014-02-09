@@ -10,7 +10,7 @@ var mime = require('mime');
 
 var datejs = require('safe_datejs');
 var DbXml = database.Xmls;
-
+var tLog = database.LogErro;
 var DbDevice = database.Device;
 
 var xmlModule = require("./model/xml.js");
@@ -152,7 +152,15 @@ app.post("/createAdmin",function(req,res,next){
 			ret.usuario = req.body.login;
 			ret.senha = req.body.senha;
 			ret.nome = req.body.nome;
-			ret.situacao = req.body.situaca;
+			ret.situacao = req.body.situacao;
+			ret.cod_usuario = req.body.cod_usuario;
+			if(req.body.situacao == "INATIVO")
+			{
+				var today = new Date();
+				var unsafeToday = today.AsDateJs(); 
+				ret.data_termino= unsafeToday;
+			}
+			
 			ret.save(function(err,saveAdmin){
 				console.log(err);
 				console.log(saveAdmin);
@@ -179,6 +187,12 @@ app.post("/createAdmin",function(req,res,next){
 		admin.tipo = req.body.tipo;
 		admin.nome = req.body.nome;
 		admin.situacao = req.body.situacao;
+		admin.cod_usuario = req.body.cod_usuario;
+		var today = new Date();
+		var unsafeToday = today.AsDateJs(); 
+		admin.data_inicio = unsafeToday;
+		
+		
 		admin.id_empresa = req.body.empresa;
 		admin.save(function(err,saveAdmin){
 			console.log(err);
@@ -360,6 +374,32 @@ app.get("/sendpush",function(req,res,next){
 	
 });
 
+//Create LOG
+
+function createLog(ip,mensagem,tipo)
+{
+	var log = new LogErro();
+	
+	log.ip = ip;
+	log.mensagem = mensagem;
+	log.tipo = tipo;
+	
+	log.save(function(err,saveXML){
+		if(!err)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+			
+	});
+
+}
+
+
+
 //POST Dos Dados
 app.post("/createXml",multipartMiddleware, function(req,res,next){
 	var retApp = req.query.app;
@@ -412,15 +452,15 @@ app.post("/createXml",multipartMiddleware, function(req,res,next){
 						    		var xml = new DbXml();
 						    		
 						    		xml.titulo = item.titulo;
-						    		
-						    		
-						    		var today = new Date();
-									var unsafeToday = today.AsDateJs(); 
-						    		xml.data = unsafeToday;
-						    		xml.email = item.email;
+						    		xml.data = item.validade;
+						    		xml.email = item.aprovador;
 						    		xml.dados_criptografados = item.dados;
 						    		xml.id_sistema = id_sistema;
+						    		xml.id_xml_enviado = item.id;
 						    		xml.tipo_aprovacao = item.tipo;
+						    		xml.prioridade = item.prioridade;
+						    		
+						    		
 						    		xml.save(function(err,saveXML){
 						    			console.log(err);
 						    			if(!err)
@@ -552,12 +592,23 @@ app.post("/createEmpresa",function(req,res,next){
 //		return;
 //	}
 	
+	console.log(req);
+	
 	if(req.body.identificador)
 	{
 		DbEmpresa.findOne({_id:req.body.identificador},function(err,ret){
 			ret.descricao = req.body.descricao;
 			ret.nome = req.body.nome;
-			ret.situacao = req.body.situacao
+			ret.situacao = req.body.situacao;
+			
+			if(req.body.situacao == "INATIVO")
+			{
+				var today = new Date();
+				var unsafeToday = today.AsDateJs(); 
+				ret.data_termino= unsafeToday;
+			}
+			
+			
 			ret.save(function(err,saveAdmin){
 				console.log(err);
 				console.log(saveAdmin);
@@ -582,6 +633,11 @@ app.post("/createEmpresa",function(req,res,next){
 		empresa.descricao = req.body.descricao;
 		empresa.nome = req.body.nome;
 		empresa.situacao = req.body.situacao;
+		
+		var today = new Date();
+		var unsafeToday = today.AsDateJs(); 
+		empresa.data_inicio= unsafeToday;
+		
 		empresa.save(function(err,saveAdmin){
 			console.log(err);
 			if(!err)

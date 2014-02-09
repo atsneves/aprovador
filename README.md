@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 
 
-# EaeEditora
+# Aprovador
 
 
 
@@ -20,8 +20,8 @@ Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
 
 Nodeclipse is free open-source project that grows with your contributions.
 =======
-editorataboca_apps
+Aprovador
 ==================
 
-Editora Taboca server apps
+Aprovador server apps
 >>>>>>> cddd4568766a26b2cea682b874bb6aaf6a4044db
