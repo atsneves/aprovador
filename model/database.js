@@ -78,6 +78,8 @@ var LogErroSchema = new Schema ({
 	tipo: {type: String, required: true, enum: enumTipoLog,default:"NOERRO"},
 	data: {type: Date,default: Date.now}
 });
+
+
 mongoose.model(TABLE_LOG_EROO, LogErroSchema);
 exports.LogErro = mongoose.model(TABLE_LOG_EROO);
 
