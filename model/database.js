@@ -6,6 +6,7 @@ Schema = mongoose.Schema;
 ///Cria a tabela de administrador
 
 var TABLE_XML = "Xml";
+var TABLE_XMLBUTTON = "XmlButton";
 var TABLE_XMLCRYPT = "XmlCrypt";
 var TABLE_RESPOSTA = "Resposta";
 var TABLE_EMPRESA = "Empresa";
@@ -49,15 +50,23 @@ var DeviceSchema = new Schema({
 });
 
 var XMLSchema = new Schema({
-	id_sistema:{type:String,required:true},
-	email: {type:String,required:true},
-	titulo: {type:String,required:true},
-	tipo_aprovacao: {type:String,required:true},
-	dados_criptografados: {type:String,required:true},
-	prioridade: {type:String},
-	id_xml_enviado: {type:String},
-	data: {type: String}
+	cod_usuario:{type:String,required:true},
+	subject:{type:String},
+	category: {type:String,required:true},
+	priority: {type:String,required:true},
+	start_date: {type:String,required:true},
+	end_date: {type:String},
+	id_xml: {type:String,required:true},
+	dados_criptografados: {type: String,required:true}
 });
+
+var XMLButtonSchema = new Schema({
+	id_xml: {type:String,required:true},
+    code: {type:String},
+    warning: {type:String},
+    descricao: {type:String}
+});
+
 
 
 var XMLCryptSchema = new Schema({
@@ -94,6 +103,10 @@ exports.Cadastro = mongoose.model(TABLE_CADASTRO);
 
 mongoose.model(TABLE_XML, XMLSchema);
 exports.Xmls = mongoose.model(TABLE_XML);
+
+mongoose.model(TABLE_XMLBUTTON, XMLButtonSchema);
+exports.XmlButton = mongoose.model(TABLE_XMLBUTTON);
+
 
 mongoose.model(TABLE_XMLCRYPT, XMLCryptSchema);
 exports.XmlCrypt = mongoose.model(TABLE_XMLCRYPT);

@@ -1,0 +1,137 @@
+<root encoding="UTF-8" version="1.0">
+	<items>
+		<item>
+			<id>31598107</id>
+			<subject>Unable To Approve Blanket Release 150302-3347</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 13:49:34</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1" warning="YES">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31596973</id>
+			<subject>Unable To Approve Blanket Release 150302-3722</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 13:57:24</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597045</id>
+			<subject>Unable To Approve Blanket Release 504637-48</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 14:05:09</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597076</id>
+			<subject>Unable To Approve Blanket Release 150302-5371</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 14:09:11</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597099</id>
+			<subject>Unable To Approve Blanket Release 150302-5917</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 14:13:11</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597158</id>
+			<subject>Unable To Approve Blanket Release 150302-6034</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 14:19:10</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597200</id>
+			<subject>Unable To Approve Blanket Release 504637-81</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 14:23:21</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597220</id>
+			<subject>Unable To Approve Blanket Release 504637-95</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>99</priority>
+			<start_date>01/12/2011 14:26:05</start_date>
+			<end_date></end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE2">botao 2</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+		<item>
+			<id>31597232</id>
+			<subject>Unable To Approve Blanket Release 504637-96</subject>
+			<user>01484038</user>
+			<category>CVRD PO Approval</category>
+			<priority>50</priority>
+			<start_date>01/12/2011 14:27:26</start_date>
+			<end_date>01/12/2015 14:27:26</end_date>
+			<buttons>
+				<button code="LOOKUP_CODE1">botao 1</button>
+				<button code="LOOKUP_CODE3" warning="YES">botao 3</button>
+			</buttons>
+			<detail><![CDATA[54C83EE5C43E59E9B888103EC7C8F69564ECA2A2F221127427E8700AEE641C0C704606FD902FD08FBCDC67506C78F99F]]></detail>
+		</item>
+	</items>
+</root>

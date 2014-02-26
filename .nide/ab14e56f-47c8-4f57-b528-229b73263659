@@ -443,7 +443,7 @@ app.post("/createXml",multipartMiddleware, function(req,res,next){
 						    parser.parseString(data, function (err, result) {
 						        var obj = result.root.items[0];
 						        
-//						        console.log(obj.item.length);
+						        console.log(obj.item.length);
 						    	
 						    	var sucesso = false;
 						    	var cCount = 0;
@@ -461,44 +461,26 @@ app.post("/createXml",multipartMiddleware, function(req,res,next){
 						    		xml.priority = item.priority;
 						    		xml.start_date = item.start_date;
 						    		xml.end_date = item.end_date;
-						    		xml.id_xml = item.id;
+						    		xml.id_xml_enviado = item.id;
 						    		xml.dados_criptografados = item.detail;
 						    		
-						    		var itemBtn = item.buttons[0].button;
-						    		for (j = 0;j < itemBtn.length;j++)
+						    		
+						    		for (j = 0;j < item.buttons.length;j++)
 						    		{
-						    			var btn = itemBtn[j];
-//						    			console.log(btn._);
-                                        var objeto = btn.$;
-
-//                                        console.log(objeto);
-
+						    			var btn = item.buttons[j];
+						    			
 						    			var xmlButtom = new DbXmlButton();
 						    			xmlButtom.id_xml = item.id;
-                                        xmlButtom.code = objeto.code;
-                                        if(objeto.warning)
-                                        {
-                                            xmlButtom.warning = objeto.warning;
-                                        }
-                                        xmlButtom.descricao = btn._;
-                                        xmlButtom.save(function(erre,saveXMLButtom){
-//                                            console.log(err);
-                                            if(!erre)
-                                            {
-//                                                console.log(saveXMLButtom);
-                                            }
-                                        });
+						    			
 						    		}
 						    		
-//						    		console.log(item);
+						    		console.log(item);
 						    		
 						    		
 						    		xml.save(function(err,saveXML){
-						    			console.log("Erro na linha = "+i+"\n XML:"+saveXML);
+						    			console.log(err);
 						    			if(!err)
 						    			{
-
-                                            console.log(saveXML);
 						    				if(cCount == obj.item.length)
 						    				{
 						    					
@@ -512,7 +494,7 @@ app.post("/createXml",multipartMiddleware, function(req,res,next){
 						    			{
 						    				
 						    				retorno.success = false;
-						    				retorno.mensagem = "XML com o seguinte erro na linha "+ i + ": "+err;
+						    				retorno.mensagem = "XML com o seguinte erro: "+err.message;
 						    				res.json(retorno);
 						    			}
 						    		});

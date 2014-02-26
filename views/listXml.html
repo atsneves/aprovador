@@ -8,19 +8,19 @@
  		<th>Aprovador</th>
  		<th>Titulo</th>
  		<th>Tipo</th>
- 		<th>Data</th>
- 		<th>Criptografados</th>
+ 		<th>Data Inicio</th>
+ 		<th>Data Término</th>
  	</tr>
  </thead>
  <tbody>
  	<% for(var i=0; i<qryXml.length; i++) { %>
        <tr>
- 		<td><%= qryXml[i].id_sistema %></td>
- 		<td><%= qryXml[i].email %></td>
- 		<td><%= qryXml[i].titulo %></td>
- 		<td><%= qryXml[i].tipo_aprovacao %></td>
- 		<td><%= qryXml[i].data %></td>
- 		<td><%= qryXml[i].dados_criptografados %></td>
+ 		<td><%= qryXml[i].id_xml %></td>
+ 		<td><%= qryXml[i].cod_usuario %></td>
+ 		<td><%= qryXml[i].subject %></td>
+ 		<td><%= qryXml[i].category %></td>
+ 		<td><%= qryXml[i].start_date %></td>
+ 		<td><%= qryXml[i].end_date %></td>
  	</tr>
  	 
     <% } %>

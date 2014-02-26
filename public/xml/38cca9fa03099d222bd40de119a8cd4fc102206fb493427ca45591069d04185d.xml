@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<itens>
+<item>
+	<id>11111</id>
+	<titulo>Ordem de compra 11111</titulo>
+
+	<aprovador>atsneves@gmail.com</aprovador>
+
+	<categoria>Ordem de compra</categoria>
+
+	<prioridade>1</prioridade>
+	<tipo>APPROVAR_REJEITAR</tipo>
+	<validade>01/06/2014 12:00:00</validade>
+	<dados><![CDATA[IO7Rirb59r5ITcVo4ydScSCe9WCYwRU1Iyuq86tM0uw=]]></dados>
+</item>
+
+<item>
+
+	<id>22222</id>
+	<titulo>Ordem de compra 22222</titulo>
+
+	<aprovador>atsneves@gmail.com</aprovador>
+
+	<categoria>Ordem de compra</categoria>
+
+	<tipo>APPROVAR_REJEITAR</tipo>
+	<dados><![CDATA[+7zL+hQs8oaoODkovjHdGnOrhq+pltXAkBcuBxR3MTg=]]></dados>
+
+</item>
+
+<item>
+
+	<id>33333</id>
+	<titulo>Requisição de compra 33333 foi aprovada</titulo>
+
+	<aprovador>bruno.faust@gmail.com</aprovador>
+
+	<categoria>Requisição de compra</categoria>
+
+	<tipo>SOMENTE_OK</tipo>
+	<dados><![CDATA[FkQMATdC7NfPRIRd7z/mDNmBHcar52KFfji6lFCDYDYe/lrNyTynwhx2RytmcDOAVCyAanr3je+NgTNMygW7gglkvTuYnVFFSJrW4Viad+w=]]></dados>
+
+</item>
+
+</itens>
