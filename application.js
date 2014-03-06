@@ -687,6 +687,35 @@ app.post("/createEmpresa",function(req,res,next){
 		});
 	}
 });
+app.post("loginApp",function(req,res,next){
+    DbCadastro.findOne({usuario : req.body.login,senha:req.body.senha,situacao:"ATIVO",tipo:"USER"}, function(err, retDatabase) {
+        console.log(req.body);
+        if (retDatabase)
+        {
+            res.json(retDatabase);
+        }
+        else
+        {
+            res.json(err);
+        }
+    });
+});
+
+app.post("getXMLByUser",function(req,res,next){
+    DbXml.find({cod_usuario:req.body.userCode}).sort({priority:-1}).exec(function (err, retXML){
+
+        if(retXML)
+        {
+            res.json(retXML);
+        }
+        else
+        {
+            res.json(err);
+        }
+
+    });
+
+});
 
 app.configure("development",function(){
 	app.use(express.errorHandler({dumpExceptions:true,showStack:true}));
